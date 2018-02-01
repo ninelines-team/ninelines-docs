@@ -23,3 +23,6 @@
   * [Метатеги Microsoft](15_metatags.md#Метатеги-microsoft)
   * [Метатеги Open Graph](15_metatags.md#метатеги-open-graph)
   * [Метатеги Twitter](15_metatags.md#Метатеги-twitter)
+* [Оформление Pug-кода](16_codestyle-pug.md)
+* [Оформление SCSS-кода](17_codestyle-scss.md)
+* [Оформление JavaScript-кода](18_codestyle-javascript.md)
