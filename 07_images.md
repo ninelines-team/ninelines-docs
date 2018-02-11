@@ -4,7 +4,7 @@
 При запуске задачи `images` файлы из папки собираются, оптимизируются, и получившийся результат сохраняется в `build/images`.
 
 ```text
-project-template
+ninelines-template
 ├── build
 │   └── images
 └── src
@@ -16,7 +16,7 @@ project-template
 Если изображений очень много, либо имеются файлы, обработка которых занимает значительное время, то их необходимо предварительно оптимизировать и сохранить в папке `src/resources/images`:
 
 ```text
-project-template
+ninelines-template
 └── src
     └── resources
         └── images
@@ -39,7 +39,7 @@ project-template
    Сохраняем в `src/images/sprites/png`:
 
    ```text
-   project-template
+   ninelines-template
    └── src
        └── images
            └── sprites
@@ -57,7 +57,7 @@ project-template
 3. Генератор оптимизирует и объединяет иконки в спрайты:
 
    ```text
-   project-template
+   ninelines-template
    └── build
        └── images
            ├── sprites.png
@@ -67,7 +67,7 @@ project-template
    На основе предзаданного шаблона `src/scss/_sprites.hbs` генерируется файл `src/scss/_sprites.scss`, содержащий вспомогательную информацию о получившихся спрайтах:
 
    ```text
-   project-template
+   ninelines-template
    └── src
        └── scss
            ├── _sprites.hbs
@@ -135,7 +135,7 @@ project-template
    Сохраняем в папку `src/images/sprites/svg`:
 
    ```text
-   project-template
+   ninelines-template
    └── src
        └── images
            └── sprites
@@ -152,7 +152,7 @@ project-template
 3. Генератор оптимизирует и объединяет иконки в один спрайт:
 
    ```text
-   project-template
+   ninelines-template
    └── build
        └── images
            └── sprites.svg

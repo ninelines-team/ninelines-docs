@@ -1,7 +1,7 @@
 # Структура папок и файлов
 
 ```text
-project-template
+ninelines-template
 ├── src
 │   ├── images
 │   │   └── sprites
@@ -12,9 +12,8 @@ project-template
 │   ├── js
 │   │   ├── vendor
 │   │   │   └── .keep
-│   │   ├── detect.js
-│   │   ├── globals.js
 │   │   ├── main.js
+│   │   ├── variables.js
 │   │   └── vendor.js
 │   ├── pug
 │   │   ├── mixins
@@ -51,10 +50,9 @@ project-template
 ├── .pug-lintrc.json
 ├── .stylelintrc
 ├── bitbucket-pipelines.yml
-├── gulpfile.babel.js
+├── gulpfile.js
 ├── package.json
-├── README.md
-└── router-config.js
+└── README.md
 ```
 
 ## `src`
@@ -88,22 +86,22 @@ project-template
 
 Папка `src/js/vendor` предназначена для хранения скриптов сторонних библиотек, которых нет в репозитории npm.
 
-## `src/js/detect.js`
-
-Файл `src/js/detect.js` предназначен для определения устройства, браузера и операционной системы пользователя.
-
-## `src/js/globals.js`
-
-Файл `src/js/globals.js` предназначен для хранения глобальных переменных.
-
 ## `src/js/main.js`
 
 Файл `src/js/main.js` предназначен для хранения основной логики сайта.
 При сборке данный файл попадает в `build/js`.
 
+## `src/js/variables.js`
+
+Файл `src/js/variables.js` предназначен для хранения глобальных переменных.
+
 ## `src/js/vendor.js`
 
-Файл `src/js/vendor.js` предназначен для подключения скриптов сторонних библиотек.
+Файл `src/js/vendor.js` предназначен для подключения скриптов сторонних библиотек. Библиотеки допустимо подключать и в
+`main.js` и в `vendor.js`. В `main.js` подключается в том случае, если из библиотеки необходимо что-то импортировать,
+и сама библиотека при этом не замедляет сборку. В иных случаях (ничего не нужно импортировать или значительно
+замедляется сборка) следует подключать в `vendor.js`.
+
 При сборке данный файл попадет в `build/js`.
 
 ## `src/pug`
@@ -243,9 +241,9 @@ project-template
 
 `bitbucket-pipelines.yml` — файл настроек Bitbucket Pipelines.
 
-## `gulpfile.babel.js`
+## `gulpfile.js`
 
-`gulpfile.babel.js` — основной файл сборки, содержащий Gulp-задачи.
+`gulpfile.js` — основной файл сборки, содержащий Gulp-задачи.
 
 ## `package.json`
 
@@ -253,8 +251,4 @@ project-template
 
 ## `README.md`
 
-`README.md` — документация.
-
-## `router-config.js`
-
-`router-config.js` — файл настроек роутинга Browsersync (только для одностраничных приложений).
+`README.md` — описание проекта.

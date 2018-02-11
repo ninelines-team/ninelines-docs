@@ -25,12 +25,15 @@ npm install --save foundation-sites
 `src/js/vendor.js`:
 
 ```js
-// @include('../../node_modules/foundation-sites/dist/js/foundation.js')
-```
+import $ from 'jquery';
 
-`src/js/main.js`:
+window.$ = $;
+window.jQuery = $;
 
-```js
+import Foundation from 'foundation-sites';
+
+Foundation.addToJquery($);
+
 $(document).foundation();
 ```
 

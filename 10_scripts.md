@@ -5,14 +5,13 @@
 Скрипты размещаются в папке `src/js`:
 
 ```text
-project-template
+ninelines-template
 └── src
     └── js
         ├── vendor
         │   └── .keep
-        ├── detect.js
-        ├── globals.js
         ├── main.js
+        ├── variables.js
         └── vendor.js
 ```
 
@@ -25,47 +24,31 @@ gulp jsMain jsVendor
 После выполнения команды в папке `build/js` появятся файлы `main.js` и `vendor.js`:
 
 ```text
-project-template
+ninelines-template
 └── build
     └── js
         ├── main.js
         └── vendor.js
 ```
 
-Обработкой скриптов занимаются следующие библиотеки:
-
-* [gulp-file-include](https://www.npmjs.com/package/gulp-file-include)
-* [gulp-babel](https://www.npmjs.com/package/gulp-babel)
-
-[gulp-file-include](https://www.npmjs.com/package/gulp-babel) является упрощенной альтернативой ES6-модулям.
-Пример подключения файлов:
-
-```js
-// @include('detect.js')
-// @include('globals.js')
-```
-
-[gulp-babel](https://www.npmjs.com/package/gulp-babel) позволяет задействовать в процессе сборки JavaScript-транспайлер [Babel](https://babeljs.io/).
-Таким образом, самые современные возможности JavaScript становятся доступны даже для старых браузеров.
-
 Также дополнительно подключены библиотеки:
 
 * [jQuery](https://jquery.com/)
-* [bowser](https://github.com/lancedikson/bowser)
+* [ninelines-ua-parser](https://github.com/ninelines-team/ninelines-ua-parser)
 
-[bowser](https://github.com/lancedikson/bowser) отвечает за определение устройства, браузера и операционной системы пользователя.
-В файле `src/js/detect.js` содержится код для автоматической расстановки классов тегу `<html>` на основе полученных значений.
-Примеры классов:
+[ninelines-ua-parser](https://github.com/ninelines-team/ninelines-ua-parser) основана на
+[ua-parser-js](https://github.com/faisalman/ua-parser-js) и отвечает за определение устройства, браузера и операционной
+системы пользователя, а также автоматически проставляет классы `<html>` элементу:
 
-* `.is-os-mac`
+* `.is-os-mac-os`
 * `.is-os-windows`
 * `.is-os-linux`
 * `.is-os-android`
 * `.is-os-ios`
 * `.is-device-mobile`
 * `.is-device-tablet`
+* `.is-device-desktop`
 * `.is-engine-webkit`
-* `.is-engine-blink`
 * `.is-engine-gecko`
 * `.is-browser-chrome`
 * `.is-browser-firefox`
@@ -76,8 +59,6 @@ project-template
 
 ```scss
 .for-desktop {
-    display: block;
-
     .is-device-mobile & {
         display: none;
     }

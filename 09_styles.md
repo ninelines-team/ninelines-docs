@@ -7,7 +7,7 @@
 Стили размещаются в папке `src/scss`:
 
 ```text
-project-template
+ninelines-template
 └── src
     └── scss
         ├── functions
@@ -38,7 +38,7 @@ gulp scss
 После выполнения команды в папке `build/css` появятся файлы `main.css` и `main.css.map`:
 
 ```text
-project-template
+ninelines-template
 └── build
     └── css
         ├── main.css

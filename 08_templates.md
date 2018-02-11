@@ -16,7 +16,7 @@ Pug предоставляет множество возможностей, уп
 Шаблоны страниц размещаются в `src`, а дополнительные файлы и миксины в `src/pug`:
 
 ```text
-project-template
+ninelines-template
 └── src
     ├── pug
     │   ├── mixins
@@ -34,7 +34,7 @@ gulp pug
 После выполнения команды в папке `build` появятся HTML-файлы:
 
 ```text
-project-template
+ninelines-template
 └── build
     └── index.html
 ```
@@ -85,7 +85,6 @@ prepend vars
     - image = 'http://example.com/images/image.png'
 
 append vars
-    - html.classList.push('page-index')
     - link.icon['16x16'] = 'favicon_16x16.png'
     - link.icon['32x32'] = 'favicon_32x32.png'
 ```
@@ -133,7 +132,8 @@ append links
 ```jade
 block content
     .container
-        h1 Заголовок страницы
+        h1
+            | Заголовок страницы
 ```
 
 ### `scripts`
@@ -174,7 +174,7 @@ block content
 Результаты проверки:
 
 ```text
-project-template/src/index.pug:7:14
+ninelines-template/src/index.pug:7:14
     5|
     6| block content
   > 7|   a(href='#').link Ссылка
@@ -183,7 +183,7 @@ project-template/src/index.pug:7:14
 
 All class literals must be written before any attribute blocks
 
-project-template/src/index.pug:7:5
+ninelines-template/src/index.pug:7:5
     5|
     6| block content
   > 7|   a(href='#').link Ссылка
@@ -192,7 +192,7 @@ project-template/src/index.pug:7:5
 
 Invalid attribute quote mark found
 
-project-template/src/index.pug:4:1
+ninelines-template/src/index.pug:4:1
     2|
     3| append vars
   > 4|   - html.classList.push('page-index')
@@ -203,7 +203,7 @@ project-template/src/index.pug:4:1
 
 Invalid indentation
 
-project-template/src/index.pug:7:1
+ninelines-template/src/index.pug:7:1
     5|
     6| block content
   > 7|   a(href='#').link Ссылка
@@ -222,7 +222,8 @@ append vars
     - html.classList.push('page-index')
 
 block content
-    a.link(href="#") Ссылка
+    a.link(href="#")
+        | Ссылка
 ```
 
 В дополнение к проверкам кода линтером следует придерживаться следующих правил:

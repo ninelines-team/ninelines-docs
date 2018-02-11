@@ -6,7 +6,7 @@
 Подобные файлы следует хранить в папке `src/resources`.
 
 ```text
-project-template
+ninelines-template
 └── src
     └── resources
         └── ...
@@ -54,7 +54,7 @@ gulp copy
 Полученные файлы следует хранить в папке `src/resources/fonts`:
 
 ```text
-project-template
+ninelines-template
 └── src
     └── resources
         └── fonts

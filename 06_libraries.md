@@ -10,12 +10,13 @@ npm install --save jquery
 npm install --save-dev gulp
 ```
 
-`--save` указывается для библиотек, код которых попадает в итоговую сборку (папку `build`) и будет использоваться на сайте.<br>
+`--save` указывается для библиотек, код которых попадает в итоговую сборку (папку `build`) и будет использоваться на сайте.
+
 `--save-dev` указывается для библиотек, которые используются только для сборки.
 
 После установки необходимо подключить нужные файлы библиотеки:
 
-* скрипты — в `src/js/vendor.js` (рекомендуется подключать неминифицированные файлы).
+* скрипты — в `src/js/vendor.js` или `src/js/main.js`.
 * стили — в `src/scss/_vendor.scss`.
 * изображения — в `src/images`.
 * любые другие файлы — в `src/resources`.
@@ -31,7 +32,7 @@ npm install --save-dev gulp
 2. Подключение скриптов в файл `src/js/vendor.js`:
 
    ```js
-   // @include('../../node_modules/fancybox/dist/js/jquery.fancybox.js')
+   import 'fancybox';
    ```
 
 3. Подключение стилей в файл `src/scss/_vendor.scss`:
@@ -45,7 +46,7 @@ npm install --save-dev gulp
 4. Копирование изображений в `src/images`:
 
    ```text
-   project-template
+   ninelines-template
    └── src
        ├── images
        │   ├── blank.gif

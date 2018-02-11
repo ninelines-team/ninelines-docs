@@ -1,9 +1,9 @@
 # Начало работы
 
-Для начала работы над проектом необходимо [скачать архив](https://github.com/beliarh/project-template/archive/master.zip) или клонировать текущий репозиторий:
+Для начала работы над проектом необходимо [скачать архив](https://github.com/ninelines-team/ninelines-template/archive/master.zip) или клонировать текущий репозиторий:
 
 ```bash
-git clone https://github.com/beliarh/project-template.git
+git clone https://github.com/ninelines-team/ninelines-template-template.git
 ```
 
 После распаковки архива рекомендуется изменить название проекта в файле `package.json` (ключ `name`) в соответствии с названием разрабатываемого сайта.
