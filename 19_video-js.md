@@ -54,7 +54,7 @@ let video = videojs('my-video', {
 });
 ```
 
-**Основные опции**:
+**Основные опции:**
 
 * `autoplay: boolean` - автоматическое воспроизведение;
 * `controls: boolean` - отображать ли интерфейс плеера;
@@ -64,7 +64,7 @@ let video = videojs('my-video', {
 * `width: string|number` - ширина видео;
 * `height: string|number` - высота видео;
 
-**Дополнительные опции**:
+**Дополнительные опции:**
 
 * `fluid: boolean` - подгонять ли видео под размер контейнера;
 * `aspectRatio: string` - соотношение сторон видео (16:9, 4:3);
@@ -118,7 +118,7 @@ let video = videojs('my-video', {
 
 * `remainingTime()` - возвращает оставшееся время;
 
-**Пример**:
+**Пример:**
 
 ```js
 let video = videojs('video', {
@@ -144,7 +144,7 @@ video.on('ready', () => {
 События те же, что у нативного элемента `video`.
 Полный список [тут](https://developer.mozilla.org/ru/docs/Web/Guide/Events/Media_events).
 
-**Пример**:
+**Пример:**
 
 ```js
 video.on('dispose', () => {
@@ -198,17 +198,17 @@ video.src({
 <link href="http://vjs.zencdn.net/6.7.1/video-js.css" rel="stylesheet">
 ```
 
-**Стандартный скин**:
+**Стандартный скин:**
 
 ![Стандартная стилизация](images/19/image-1.jpg)
 
-**Отображение без стилей**:
+**Отображение без стилей:**
 
 ![Отображение без стилей](images/19/image-2.jpg)
 
 Для кастомной стилизаци, нужно использовать свои стили.
 
-**Пример своей стилизации**:
+**Пример своей стилизации:**
 
 ![Своя стилизация](images/19/image-3.jpg)
 
@@ -268,7 +268,7 @@ video.src({
 
 - Кнопка полноэкранного режима `.vjs-fullscreen-control`
 
-**Пример**:
+**Пример:**
 
 ```scss
 .vjs-progress-control {
