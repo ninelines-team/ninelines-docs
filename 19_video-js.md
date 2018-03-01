@@ -190,6 +190,30 @@ video.src({
 });
 ```
 
+Для воспроизведения стриминга с других серверов, необходимо установить свойcтво `withCredentials: false`
+
+## Выбор качества воспроизводимого видео
+
+Для ручного выбора качества видео, необходимо установить 2 плагина.
+
+`npm install --save videojs-contrib-quality-levels`
+
+`npm install --save videojs-hls-quality-selector`
+
+После указания источника видео, нужно вызвать метод `.hlsQualitySelector()` для экземпляра видео.
+
+**Пример**
+
+```javascript
+video.src({
+    src: `video.m3u8`,
+    type: 'application/x-mpegURL',
+   	withCredentials: false,
+});
+   
+video.hlsQualitySelector(); 
+```
+
 ## Стилизация
 
 По умолчанию используется стандартный скин.
