@@ -177,8 +177,12 @@ npm install --save videojs-contrib-hls
 ```js
 let video = videojs('my-video', {
     html5: {
+    	nativeAudioTracks: false,
+        nativeVideoTracks: false,
+        nativeTextTracks: false,
         hls: {
-            withCredentials: true,
+    		overrideNative: true,
+            withCredentials: true,            
         }
     }
 });
@@ -241,6 +245,21 @@ video.addRemoteTextTrack({
     src: 'subtitles.vtt',
     default: true,
 }, false);
+```
+
+Задать стили субтитрам можно так:
+
+```scss
+.vjs-text-track-display {
+	display: block;
+	pointer-events: none;
+
+	div {
+		font-family: Arial, sans-serif !important;
+		font-size: 40px !important;
+		background-color: transparent !important;
+		}
+	}
 ```
 
 ## Стилизация
