@@ -181,7 +181,7 @@ let video = videojs('my-video', {
         nativeVideoTracks: false,
         nativeTextTracks: false,
         hls: {
-    		overrideNative: true,
+            overrideNative: true,
             withCredentials: true,            
         }
     }
