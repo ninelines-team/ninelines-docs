@@ -214,6 +214,35 @@ video.src({
 video.hlsQualitySelector(); 
 ```
 
+## Субтитры
+
+Для субтриров используются файлы в формате `.vtt`
+
+**Пример**
+
+```
+WEBVTT
+
+00:01.000 --> 00:04.000
+Never drink liquid nitrogen.
+
+00:05.000 --> 00:09.000
+- It will perforate your stomach.
+```
+
+Что бы подключить субтитры к видео - нужно использовать метод `.addRemoteTextTrack()`
+
+**Пример**
+
+```
+video.addRemoteTextTrack({
+    label: 'Russian',
+    kind: 'captions',
+    src: 'subtitles.vtt',
+    default: true,
+}, false);
+```
+
 ## Стилизация
 
 По умолчанию используется стандартный скин.
