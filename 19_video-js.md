@@ -177,7 +177,7 @@ npm install --save videojs-contrib-hls
 ```js
 let video = videojs('my-video', {
     html5: {
-    	nativeAudioTracks: false,
+        nativeAudioTracks: false,
         nativeVideoTracks: false,
         nativeTextTracks: false,
         hls: {
@@ -212,7 +212,7 @@ npm install --save videojs-contrib-quality-levels videojs-hls-quality-selector
 video.src({
     src: `video.m3u8`,
     type: 'application/x-mpegURL',
-   	withCredentials: false,
+    withCredentials: false,
 });
    
 video.hlsQualitySelector(); 
@@ -247,19 +247,19 @@ video.addRemoteTextTrack({
 }, false);
 ```
 
-Задать стили субтитрам можно так:
+Задать стили субтитрам можно так (здесь используется `!important`, так как video.js задает стили инлайн):
 
 ```scss
 .vjs-text-track-display {
-	display: block;
-	pointer-events: none;
+    display: block;
+    pointer-events: none;
 
-	div {
-		font-family: Arial, sans-serif !important;
-		font-size: 40px !important;
-		background-color: transparent !important;
-		}
-	}
+    div {
+        font-family: Arial, sans-serif !important;
+        font-size: 40px !important;
+        background-color: transparent !important;
+    }
+}
 ```
 
 ## Стилизация
