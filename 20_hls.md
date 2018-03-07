@@ -52,7 +52,7 @@
    <summary>Удобнее это делать, используя переменную с названием видео:</summary>
 
    ```bash
-   SET video_name=имя_video
+   SET video_name="название_видео"
 
    mkdir 1080 720 406 270 180
 
