@@ -8,7 +8,7 @@
 
 * Максимальная длина строки — 120 символов.
 
-* `!important` используется только для того, чтобы перебить значение `style`-атрибута. 
+* `!important` используется только для того, чтобы перебить значение `style`-атрибута.
 
 * В коде не должно быть вендорных префиксов.
 
@@ -143,20 +143,20 @@ $color-cod-gray: #1a1a1a;
 ```scss
 .button {
     display: inline-block;
-    
+
     border: solid 1px $color-black;
     border-radius: 4px;
-    
+
     padding: 5px 10px;
-    
+
     font-family: $font-family-roboto;
     font-weight: 300;
     font-size: 16px;
     line-height: 1.5;
-    
+
     text-align: center;
     text-decoration: none;
-    
+
     cursor: pointer;
 }
 ```
@@ -282,7 +282,7 @@ p {
 }
 
 .button {
-    box-shadow: inset 0 0 2px 1px $color-black ,0 5px 4px 0 rgba($color-black, 0.25); 
+    box-shadow: inset 0 0 2px 1px $color-black ,0 5px 4px 0 rgba($color-black, 0.25);
     transition: color 0.3s , opacity 0.3s;
 }
 ```
@@ -297,7 +297,7 @@ p {
 }
 
 .button {
-    box-shadow: inset 0 0 2px 1px $color-black, 0 5px 4px 0 rgba($color-black, 0.25); 
+    box-shadow: inset 0 0 2px 1px $color-black, 0 5px 4px 0 rgba($color-black, 0.25);
     transition: color 0.3s, opacity 0.3s;
 }
 ```

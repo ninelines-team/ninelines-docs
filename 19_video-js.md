@@ -75,7 +75,7 @@ let video = videojs('my-video', {
 
    ```js
    video.src('/path/to/video.mp4');
-   
+
    video.src([
        {
            type: 'video/mp4',
@@ -182,7 +182,7 @@ let video = videojs('my-video', {
         nativeTextTracks: false,
         hls: {
             overrideNative: true,
-            withCredentials: true,            
+            withCredentials: true,
         }
     }
 });
@@ -214,8 +214,8 @@ video.src({
     type: 'application/x-mpegURL',
     withCredentials: false,
 });
-   
-video.hlsQualitySelector(); 
+
+video.hlsQualitySelector();
 ```
 
 ## Субтитры
