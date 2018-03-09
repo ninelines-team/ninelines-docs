@@ -34,12 +34,25 @@
 5. Нарезаем видео:
 
    ```bash
-   ffmpeg -i video_name.mp4
-   -s 1920x1080 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 1080/playlist-1080.m3u8 "1080/video_name-1080-%d.ts"
-   -s 1280x720 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 720/playlist-720.m3u8 "720/video_name-720-%d.ts"
-   -s 720x406 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 406/playlist-406.m3u8 "406/video_name-406-%d.ts"
-   -s 480x270 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 270/playlist-270.m3u8 "270/video_name-270-%d.ts"
-   -s 320x180 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 180/playlist-180.m3u8 "180/video_name-180-%d.ts"
+   ffmpeg \
+     -i video_name.mp4 \
+     -s 1920x1080 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 1080/playlist-1080.m3u8 "1080/video_name-1080-%d.ts" \
+     -s 1280x720 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 720/playlist-720.m3u8 "720/video_name-720-%d.ts" \
+     -s 720x406 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 406/playlist-406.m3u8 "406/video_name-406-%d.ts" \
+     -s 480x270 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 270/playlist-270.m3u8 "270/video_name-270-%d.ts" \
+     -s 320x180 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 180/playlist-180.m3u8 "180/video_name-180-%d.ts"
+   ```
+
+   Аналогичная команда для cmd:
+
+   ```bash
+   ffmpeg ^
+     -i video_name.mp4 ^
+     -s 1920x1080 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 1080/playlist-1080.m3u8 "1080/video_name-1080-%d.ts" ^
+     -s 1280x720 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 720/playlist-720.m3u8 "720/video_name-720-%d.ts" ^
+     -s 720x406 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 406/playlist-406.m3u8 "406/video_name-406-%d.ts" ^
+     -s 480x270 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 270/playlist-270.m3u8 "270/video_name-270-%d.ts" ^
+     -s 320x180 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 180/playlist-180.m3u8 "180/video_name-180-%d.ts"
    ```
 
 6. Делаем обложку:
@@ -49,22 +62,41 @@
    ```
 
    <details>
-   <summary>Удобнее это делать, используя переменную с названием видео:</summary>
+     <summary>Удобнее это делать, используя переменную с названием видео:</summary>
 
-   ```bash
-   SET video_name="название_видео"
+     ```bash
+     video_name="название_видео"
 
-   mkdir 1080 720 406 270 180
+     mkdir 1080 720 406 270 180
 
-   ffmpeg -i %video_name%.mp4
-   -s 1920x1080 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 1080/playlist-1080.m3u8 "1080/%video_name%-1080-%d.ts"
-   -s 1280x720 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 720/playlist-720.m3u8 "720/%video_name%_name-720-%d.ts"
-   -s 720x406 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 406/playlist-406.m3u8 "406/%video_name%-406-%d.ts"
-   -s 480x270 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 270/playlist-270.m3u8 "270/%video_name%-270-%d.ts"
-   -s 320x180 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 180/playlist-180.m3u8 "180/%video_name%-180-%d.ts"
+     ffmpeg
+       -i $video_name.mp4 \
+       -s 1920x1080 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 1080/playlist-1080.m3u8 "1080/$video_name-1080-%d.ts"
+       -s 1280x720 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 720/playlist-720.m3u8 "720/$video_name-720-%d.ts"
+       -s 720x406 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 406/playlist-406.m3u8 "406/$video_name-406-%d.ts"
+       -s 480x270 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 270/playlist-270.m3u8 "270/$video_name-270-%d.ts"
+       -s 320x180 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 180/playlist-180.m3u8 "180/$video_name-180-%d.ts"
 
-   ffmpeg -i %video_name%.mp4 -ss 00:00:00 -vframes 1 cover.jpg
-   ```
+     ffmpeg -i $video_name.mp4 -ss 00:00:00 -vframes 1 cover.jpg
+     ```
+
+     Аналогичная команда для cmd:
+
+     ```bash
+     SET video_name="название_видео"
+
+     mkdir 1080 720 406 270 180
+
+     ffmpeg
+       -i %video_name%.mp4 ^
+       -s 1920x1080 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 1080/playlist-1080.m3u8 "1080/%video_name%-1080-%d.ts" ^
+       -s 1280x720 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 720/playlist-720.m3u8 "720/%video_name%-720-%d.ts" ^
+       -s 720x406 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 406/playlist-406.m3u8 "406/%video_name%-406-%d.ts" ^
+       -s 480x270 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 270/playlist-270.m3u8 "270/%video_name%-270-%d.ts" ^
+       -s 320x180 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 180/playlist-180.m3u8 "180/%video_name%-180-%d.ts"
+
+     ffmpeg -i %video_name%.mp4 -ss 00:00:00 -vframes 1 cover.jpg
+     ```
    </details>
 
    На выходе получаем видео, раскиданное по папкам с нужным размером и разбитое на файлы `.ts`, манифесты `.m3u8` (содержащие метаинформацию о файлах для каждого размера) и обложку `cover.jpg`.
