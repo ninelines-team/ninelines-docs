@@ -11,7 +11,7 @@
 ### NPM
 
 ```bash
-npm install --save-dev video.js
+npm install --save video.js
 ```
 
 ### CDN
