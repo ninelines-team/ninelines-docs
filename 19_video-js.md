@@ -17,11 +17,11 @@ npm install --save video.js
 ### CDN
 
 ```html
-<script src="http://vjs.zencdn.net/6.7.1/video.js"></script>
+<script src="http://vjs.zencdn.net/6.8.0/video.js"></script>
 ```
 
 ```html
-<link href="http://vjs.zencdn.net/6.7.1/video-js.css" rel="stylesheet">
+<link href="http://vjs.zencdn.net/6.8.0/video-js.css" rel="stylesheet">
 ```
 
 ## Инициализация
