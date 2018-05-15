@@ -11,14 +11,13 @@ ninelines-template
         ├── vendor
         │   └── .keep
         ├── main.js
-        ├── variables.js
         └── vendor.js
 ```
 
-За сборку и преобразование JS отвечают задачи `jsMain` и `jsVendor`:
+За сборку и преобразование JS отвечает задача `js`:
 
 ```bash
-gulp jsMain jsVendor
+gulp js
 ```
 
 После выполнения команды в папке `build/js` появятся файлы `main.js` и `vendor.js`:
@@ -66,10 +65,6 @@ ninelines-template
 ```
 
 ## Правила написания кода
-
-### Глобальные переменные
-
-Глобальные переменные следует выносить в файл `src/js/globals.js`.
 
 ### Короткие именна переменных
 
