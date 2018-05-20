@@ -108,13 +108,24 @@ append meta
 
 ### `links`
 
-В блоке `links` подключаются стили, иконки и прочие ресурсы.
+В блоке `links` подключаются внешние ресурсы.
 
 Пример использования:
 
 ```jade
 append links
-    link(rel="stylesheet" href="css/custom.css")
+    link(rel="prefetch" href="/images/background.jpg")
+```
+
+### `styles`
+
+В блоке `styles` подключаются стили.
+
+Пример использования:
+
+```jade
+append styles
+    link(rel="stylesheet" href="/css/custom.css")
 ```
 
 ### `head-end`
