@@ -122,6 +122,32 @@ append vars
 Манифест веб-приложения предоставляет информацию о приложении (такую как имя, авторство, иконку и описание) в формате JSON-файла.
 Цель манифеста — установить веб-приложение на рабочий стол устройства, предоставляя более быстрый доступ.
 
+### `format-detection`
+
+Позволяет отключить определение номера телефона, адреса, даты или почты.
+
+```jade
+append vars
+    - meta.formatDetection.telephone = false
+```
+
+Или так:
+
+```jade
+append vars
+    - meta.formatDetection = 'telephone=no'
+```
+
+### `theme-color`
+
+Задает цвет вкладки мобильного браузера.
+
+Пример:
+
+```jade
+append vars
+    - meta.themeColor = '#4285f4'
+```
 
 ## Метатеги Apple
 
@@ -348,7 +374,7 @@ append vars
     - meta.XUACompatible = 'IE=edge'
 ```
 
-## Метатеги Open Graph
+## Метатеги [Open Graph](http://ogp.me/)
 
 Метатеги Open Graph задают дополнительную информацию, используемую социальными сетями (VK, Twitter, Google Plus, Одноклассники и так далее) для оформления публикаций.
 
@@ -356,8 +382,7 @@ append vars
 
 Задает адрес страницы в Open Graph.
 
-> Требуется указывать полный URL.<br>
-> Если значение не задано, то используется текущий адрес страницы.
+> Требуется указывать полный URL.
 
 Пример:
 
@@ -417,7 +442,7 @@ prepend vars
 
 ### `og:image`
 
-Задает изображение страницы в [Open Graph](http://ogp.me/).
+Задает изображение страницы в Open Graph.
 
 > Требуется указывать полный URL.
 
@@ -433,6 +458,50 @@ append vars
 ```jade
 prepend vars
     - image = 'http://example.com/images/og-image.png'
+```
+
+### `og:image:type`
+
+Задает MIME-тип изображения в Open Graph.
+
+Пример:
+
+```jade
+append vars
+    - meta.ogImageType = 'image/jpeg'
+```
+
+### `og:image:width`
+
+Задает ширину изображения в Open Graph.
+
+Пример:
+
+```jade
+append vars
+    - meta.ogImageWidth = 1200
+```
+
+### `og:image:height`
+
+Задает высоту изображения в Open Graph.
+
+Пример:
+
+```jade
+append vars
+    - meta.ogImageHeight = 600
+```
+
+### `og:image:alt`
+
+Задает описание изображения в Open Graph.
+
+Пример:
+
+```jade
+append vars
+    - meta.ogImageAlt = 'Описание изображения'
 ```
 
 ## Метатеги Twitter
