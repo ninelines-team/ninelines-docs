@@ -48,7 +48,6 @@ ninelines-template
 ├── .npmrc
 ├── .pug-lintrc.json
 ├── .stylelintrc
-├── bitbucket-pipelines.yml
 ├── gulpfile.js
 ├── package.json
 └── README.md
@@ -228,10 +227,6 @@ ninelines-template
 ## `.stylelintrc`
 
 `.stylelintrc` — файл настроек stylelint.
-
-## `bitbucket-pipelines.yml`
-
-`bitbucket-pipelines.yml` — файл настроек Bitbucket Pipelines.
 
 ## `gulpfile.js`
 
