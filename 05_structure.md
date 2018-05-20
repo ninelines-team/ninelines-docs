@@ -40,7 +40,6 @@ ninelines-template
 │   │   ├── _vendor.scss
 │   │   └── main.scss
 │   └── index.pug
-├── .babelrc
 ├── .editorconfig
 ├── .eslintignore
 ├── .eslintrc
@@ -195,10 +194,6 @@ ninelines-template
 
 `src/index.pug` — шаблон главной страницы.
 При сборке все Pug-файлы из папки `src` преобразуются в HTML и сохраняются в `build`.
-
-## `.babelrc`
-
-`.babelrc` — файл настроек JavaScript-транспайлера Babel.
 
 ## `.editorconfig`
 
