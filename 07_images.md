@@ -162,9 +162,9 @@ ninelines-template
    `src/pug/mixins/svg.pug`:
 
    ```jade
-   mixin svg(name)
+    mixin svg(name)
        svg&attributes(attributes)
-           use(xlink:href="/images/sprites.svg#" + name)
+           use(xlink:href=`${baseDir}images/sprites.svg#${name}`)
    ```
 
 4. Подключаем иконку в Pug:
