@@ -116,7 +116,7 @@ append vars
 
 ```jade
 append vars
-    - link.manifest = 'manifest.json'
+    - link.manifest = '/manifest.json'
 ```
 
 Манифест веб-приложения предоставляет информацию о приложении (такую как имя, авторство, иконку и описание) в формате JSON-файла.
