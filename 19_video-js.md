@@ -17,11 +17,11 @@ npm install --save video.js
 ### CDN
 
 ```html
-<script src="http://vjs.zencdn.net/6.7.1/video.js"></script>
+<script src="http://vjs.zencdn.net/6.9.0/video.js"></script>
 ```
 
 ```html
-<link href="http://vjs.zencdn.net/6.7.1/video-js.css" rel="stylesheet">
+<link href="http://vjs.zencdn.net/6.9.0/video-js.css" rel="stylesheet">
 ```
 
 ## Инициализация
@@ -176,15 +176,18 @@ npm install --save videojs-contrib-hls
 
 ```js
 let video = videojs('my-video', {
-    html5: {
-        nativeAudioTracks: false,
-        nativeVideoTracks: false,
-        nativeTextTracks: false,
+    controls: true,
+    autoplay: true,
+    loop: false,
+    poster: '/video/cover.jpg',
+        html5: {
+            nativeAudioTracks: false,
+            nativeVideoTracks: false,
+            nativeTextTracks: false,
         hls: {
             overrideNative: true,
-            withCredentials: true,
-        }
-    }
+        },
+    },
 });
 
 video.src({
