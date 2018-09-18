@@ -1,19 +1,22 @@
 # Работа с изображениями
 
 Изображения следует хранить в папке `src/images`.
-При запуске задачи `images` файлы из папки собираются, оптимизируются, и получившийся результат сохраняется в `build/images`.
+При запуске задачи `images` файлы из папки `src/images` копируются в `build/images`.
 
 ```text
 ninelines-template
 ├── build
 │   └── images
 └── src
-    ├── images
-    └── resources
-        └── images
+    └── images
 ```
 
-Если изображений очень много, либо имеются файлы, обработка которых занимает значительное время, то их необходимо предварительно оптимизировать и сохранить в папке `src/resources/images`:
+Для оптимизации изображений можно использовать задачу `optimize:images`.
+
+> `optimize:images` оптимизирует только исходные файлы из папки `src/images`!
+
+Предварительно оптимизированные изображения рекомендуется хранить в папке `src/resources/images`.
+В таком случае при запуске задачи `optimize:images` данные файлы не будут затронуты.
 
 ```text
 ninelines-template
@@ -21,15 +24,6 @@ ninelines-template
     └── resources
         └── images
 ```
-
-Оптимизированные изображения можно получить одним из следующих способов:
-
-* Скопировать из `build/images`.
-* С помощью графического редактора.
-* С помощью онлайн-инструментов ([tinypng.com](https://tinypng.com), [optimizilla.com](http://optimizilla.com/ru/), [compressor.io](https://compressor.io/)).
-* С помощью консольных утилит ([optipng](http://optipng.sourceforge.net/), [jpegoptim](https://ruhighload.com/post/Jpegoptim)).
-
-После переноса файлов в `src/resources/images` неоптимизированные версии изображений из папки `src/images` можно удалить.
 
 ## Работа с PNG-спрайтами
 
@@ -48,10 +42,10 @@ ninelines-template
                    └── phone@2x.png
    ```
 
-2. Запускаем задачу `pngSprites` (если уже запущен `gulp watch` или `gulp`, то данный шаг можно пропустить):
+2. Запускаем задачу `sprites:png` (если уже запущен `gulp watch` или `gulp`, то данный шаг можно пропустить):
 
    ```bash
-   gulp pngSprites
+   gulp sprites:png
    ```
 
 3. Генератор оптимизирует и объединяет иконки в спрайты:
@@ -77,7 +71,7 @@ ninelines-template
    Для каждой иконки создается CSS-класс в формате `.sprite-[name]`.
    В нашем случае получим класс `.sprite-phone`.
 
-   В сборке также содержится ряд SCSS-функций и миксинов для работы со спрайтами.
+   В сборке также содержится ряд SCSS-функций и миксин для работы со спрайтами.
 
    `src/scss/functions/_sprites.scss`:
 
@@ -113,7 +107,7 @@ ninelines-template
            | +7 (123) 456-78-90
    ```
 
-   Или в SCSS (с помощью миксинов):
+   Или в SCSS (с помощью миксин):
 
    ```scss
    footer {
@@ -143,10 +137,10 @@ ninelines-template
                    └── phone.svg
    ```
 
-2. Запускаем задачу `svgSprites` (если уже запущен `gulp watch` или `gulp`, то данный шаг можно пропустить):
+2. Запускаем задачу `sprites:svg` (если уже запущен `gulp watch` или `gulp`, то данный шаг можно пропустить):
 
    ```bash
-   gulp svgSprites
+   gulp sprites:svg
    ```
 
 3. Генератор оптимизирует и объединяет иконки в один спрайт:

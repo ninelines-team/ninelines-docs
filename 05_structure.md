@@ -100,15 +100,15 @@ ninelines-template
 
 ## `src/pug/mixins`
 
-Папка `src/pug/mixins` предназначена для хранения Pug-миксинов.
-
-## `src/pug/mixins/svg.pug`
-
-В файле `src/pug/mixins/svg.pug` хранится Pug-миксин для подключения SVG-иконок.
+Папка `src/pug/mixins` предназначена для хранения Pug-миксин.
 
 ## `src/pug/base.pug`
 
 В файле `src/pug/base.pug` хранится базовый шаблон страниц сайта.
+
+## `src/pug/mixins.pug`
+
+Файл `src/pug/mixins.pug` предназначен для подключения Pug-миксин из папки `src/pug/mixins`.
 
 ## `src/resources`
 
@@ -128,25 +128,9 @@ ninelines-template
 
 Папка `src/scss/functions` предназначена для хранения SCSS-функций.
 
-## `src/scss/functions/_sprites.scss`
-
-В файле `src/scss/functions/_sprites.scss` хранятся SCSS-функции для работы с PNG-спрайтами.
-
 ## `src/scss/mixins`
 
-Папка `src/scss/mixins` предназначена для хранения SCSS-миксинов.
-
-## `src/scss/mixins/_retina.scss`
-
-В файле `src/scss/mixins/_retina.scss` хранится SCSS-миксин для работы с retina.
-
-## `src/scss/mixins/_sprites.scss`
-
-В файле `src/scss/mixins/_sprites.scss` хранятся SCSS-миксины для работы с PNG-спрайтами.
-
-## `src/scss/mixins/_triangle.scss`
-
-В файле `src/scss/mixins/_triangle.scss` хранится SCSS-миксин для создания CSS-треугольников.
+Папка `src/scss/mixins` предназначена для хранения SCSS-миксин.
 
 ## `src/scss/vendor`
 
@@ -166,7 +150,7 @@ ninelines-template
 
 ## `src/scss/_mixins.scss`
 
-Файл `src/scss/_mixins.scss` предназначен для подключения миксинов из папки `src/scss/mixins`.
+Файл `src/scss/_mixins.scss` предназначен для подключения миксин из папки `src/scss/mixins`.
 
 ## `src/scss/_sprites.hbs`
 
@@ -217,7 +201,11 @@ ninelines-template
 
 ## `.pug-lintrc.json`
 
-`.pug-lintrc` — файл настроек pug-lint.
+`.pug-lintrc.json` — файл настроек pug-lint.
+
+## `.stylelintignore`
+
+`.stylelintignore` — файл настроек stylelint для игнорирования файлов.
 
 ## `.stylelintrc`
 

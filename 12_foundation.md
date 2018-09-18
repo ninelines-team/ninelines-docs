@@ -49,5 +49,5 @@ $(document).foundation();
 
 ```scss
 $global-width: 1024px;
-$grid-column-count: 8;
+$grid-columns: 8;
 ```

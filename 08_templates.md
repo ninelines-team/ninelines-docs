@@ -21,7 +21,8 @@ ninelines-template
     ├── pug
     │   ├── mixins
     │   │   └── svg.pug
-    │   └── base.pug
+    │   ├── base.pug
+    │   └── mixins.pug
     └── index.pug
 ```
 
@@ -87,8 +88,8 @@ prepend vars
     - image = 'http://example.com/images/image.png'
 
 append vars
-    - link.icon['16x16'] = 'favicon_16x16.png'
-    - link.icon['32x32'] = 'favicon_32x32.png'
+    - link.icon16x16 = '/favicon_16x16.png'
+    - link.icon32x32 = '/favicon_32x32.png'
 ```
 
 ### `head-start`
@@ -157,7 +158,7 @@ block content
 
 ```jade
 append scripts
-    script(src="js/custom.js")
+    script(src="/js/custom.js")
 ```
 
 ### `body-end`
@@ -170,7 +171,7 @@ append scripts
 Файл настроек — `.pug-lintrc.json`.
 Данный линтер позволяет поддерживать Pug-код в соответствии с заданным регламентом.
 
-Проверка осуществляется с помощью задачи `lintPug`.
+Проверка осуществляется с помощью задачи `lint:pug`.
 
 Пример использования (`src/index.pug`):
 

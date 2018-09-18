@@ -1,7 +1,7 @@
 # Основные возможности и используемые технологии
 
 * Система сборки [Gulp](https://gulpjs.com/)
-* Автоматическая оптимизация изображений.
+* Оптимизация изображений.
 * Генерация PNG- и SVG-спрайтов.
 * Шаблонизация с помощью [Pug](https://pugjs.org/).
 * CSS-препроцессор [SCSS](http://sass-lang.com/) и [Autoprefixer](https://autoprefixer.github.io/ru/).
