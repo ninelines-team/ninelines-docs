@@ -17,7 +17,8 @@ ninelines-template
 │   ├── pug
 │   │   ├── mixins
 │   │   │   └── svg.pug
-│   │   └── base.pug
+│   │   ├── base.pug
+│   │   └── mixins.pug
 │   ├── resources
 │   │   └── fonts
 │   │       └── .keep
@@ -25,9 +26,11 @@ ninelines-template
 │   │   ├── functions
 │   │   │   └── _sprites.scss
 │   │   ├── mixins
+│   │   │   ├── _clearfix.scss
 │   │   │   ├── _retina.scss
 │   │   │   ├── _sprites.scss
-│   │   │   └── _triangle.scss
+│   │   │   ├── _triangle.scss
+│   │   │   └── _visually-hidden.scss
 │   │   ├── vendor
 │   │   │   └── .keep
 │   │   ├── _base.scss
@@ -40,16 +43,19 @@ ninelines-template
 │   │   ├── _vendor.scss
 │   │   └── main.scss
 │   └── index.pug
+├── .babelrc
 ├── .editorconfig
 ├── .eslintignore
 ├── .eslintrc
 ├── .gitignore
 ├── .npmrc
 ├── .pug-lintrc.json
+├── .stylelintignore
 ├── .stylelintrc
 ├── gulpfile.js
 ├── package.json
-└── README.md
+├── README.md
+└── webpack.config.js
 ```
 
 ## `src`
@@ -179,6 +185,10 @@ ninelines-template
 `src/index.pug` — шаблон главной страницы.
 При сборке все Pug-файлы из папки `src` преобразуются в HTML и сохраняются в `build`.
 
+## `.babelrc`
+
+`.babelrc` — файл настроек JavaScript-транспайлера Babel.
+
 ## `.editorconfig`
 
 `.editorconfig` — файл настроек редактора.
@@ -222,3 +232,7 @@ ninelines-template
 ## `README.md`
 
 `README.md` — описание проекта.
+
+## `webpack.config.js`
+
+`webpack.config.js` — файл настроек webpack.
