@@ -11,11 +11,15 @@ ninelines-template
 └── src
     └── scss
         ├── functions
-        │   └── _sprites.scss
+        │   ├── _responsive.scss
+        │   └── _sprites.scss
         ├── mixins
+        │   ├── _breakpoint.scss
+        │   ├── _clearfix.scss
         │   ├── _retina.scss
-        │   ├── _sprites.scss
-        │   └── _triangle.scss
+        │   ├── _sprites.scss
+        │   ├── _triangle.scss
+        │   └── _visually-hidden.scss
         ├── vendor
         │   └── .keep
         ├── _base.scss
@@ -123,7 +127,7 @@ gulp lint:scss
 
 ### Вендорные префиксы
 
-В SCSS-коде не должно присутствовать вендорных префиксов. Они автоматически расставляются в процессе сборки.
+В SCSS-коде не должно присутствовать вендорных префиксов. Они автоматически расставляются в процессе сборки. Однако существуют исключения и некоторые префиксы необходимо добавлять вручную.
 
 **Неправильно:**
 

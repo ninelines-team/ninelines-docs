@@ -17,7 +17,8 @@
 
 ### FFMPEG
 
-1. Скачиваем и устанавливаем [FFMPEG](http://www.ffmpeg.org/download.html);
+1. Скачиваем и устанавливаем [FFMPEG](http://www.ffmpeg.org/download.html).
+У многих возникает вопрос как установить FFMPEG на Windows, поэтому ответ на этот вопрос можно найти [по ссылке](https://windowsloop.com/install-ffmpeg-windows-10/).
 2. Прописываем `FFMPEG` в `PATH`.
 3. Переходим в папку с видео:
 
@@ -55,7 +56,7 @@
      -s 320x180 -c:a aac -c:v libx264 -map 0 -f segment -segment_time 10 -segment_format mpegts -segment_list 180/playlist-180.m3u8 "180/video_name-180-%d.ts"
    ```
 
-6. Делаем обложку:
+6. Делаем обложку (если обложка не предоставлялась дизайнером):
 
    ```bash
    ffmpeg -i video_name.mp4 -ss 00:00:00 -vframes 1 cover.jpg
