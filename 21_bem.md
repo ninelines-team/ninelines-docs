@@ -64,7 +64,7 @@ header.header.is-fixed
     nav.nav
       .nav__item
         a.nav__link(href="#")
-      .nav__item.nav__item.is-active
+      .nav__item.is-active
         a.nav__link(href="#")
       .nav__item
         a.nav__link(href="#")
