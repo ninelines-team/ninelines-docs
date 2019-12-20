@@ -26,7 +26,7 @@
 * [Оформление Pug-кода](16_codestyle-pug.md)
 * [Оформление SCSS-кода](17_codestyle-scss.md)
 * [Оформление JavaScript-кода](18_codestyle-javascript.md)
-* [Кроссбраузерность и адаптивность](22_crossbrowser_adaptive.md)
+* [Кроссбраузерность и адаптивность](22_crossbrowser-adaptive.md)
 * Дополнительная информация
   * [Работа с video.js](19_video-js.md)
   * [Работа с HLS](20_hls.md)
@@ -35,4 +35,4 @@
   * [Работа с Git](24_git.md)
   * [Настройка динамических шерингов для SPA](28_dynamic-share-for-spa.md)
   * [Подробный чеклист по тестированию сайтов](25_checklist.md)
-  * [Короткий чеклист по тестированию сайтов](26_short_checklist.md)
+  * [Короткий чеклист по тестированию сайтов](26_short-checklist.md)
