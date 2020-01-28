@@ -7,16 +7,18 @@
 ### базовый код файла shareSettings.php:
 
 ```php
+$protocol = $_SERVER['PROTOCOL'] = isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) ? 'https' : 'http';
+$host = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $title = '';
 $description = '';
-$image = '';
+$image = $host . '/images/';
 
 // Uncomment the code below and fill in the pages if necessary
 // $pages = [
 //     '/page/1' => [
 //         'title' => '',
 //         'description' => '',
-//         'image' => '',
+//         'image' => '/images/',
 //     ],
 // ];
 
@@ -25,16 +27,18 @@ $page = @$pages[$_SERVER['REQUEST_URI']];
 if ($page) {
     $title = !is_null(@$page['title']) ? $page['title'] : $title;
     $description = !is_null(@$page['description']) ? $page['description'] : $description;
-    $image = !is_null(@$page['image']) ? $page['image'] : $image;
+    $image = !is_null(@$page['image']) ? $host . $page['image'] : $image;
 }
 ```
 
 ### пример кода с указанными данными для шеринга:
 
 ```php
+$protocol = $_SERVER['PROTOCOL'] = isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) ? 'https' : 'http';
+$host = $protocol . '://' . $_SERVER['HTTP_HOST'];
 $title = 'Базовый заголовок страницы';
 $description = 'Базовое описание страницы';
-$image = '/images/share/main.jpg';
+$image = $host . '/images/share/main.jpg';
 
 $pages = [
     '/article' => [
@@ -69,7 +73,7 @@ $page = @$pages[$_SERVER['REQUEST_URI']];
 if ($page) {
     $title = !is_null(@$page['title']) ? $page['title'] : $title;
     $description = !is_null(@$page['description']) ? $page['description'] : $description;
-    $image = !is_null(@$page['image']) ? $page['image'] : $image;
+    $image = !is_null(@$page['image']) ? $host . $page['image'] : $image;
 }
 ```
 
